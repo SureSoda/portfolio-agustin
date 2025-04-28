@@ -1,0 +1,383 @@
+/* NORMALIZACIÓN:  */
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: 'Inconsolata', monospace;
+  list-style: none;
+  text-decoration: none;
+  color: white;
+}
+
+body{
+  background-color: black;
+}
+
+header {
+  position: fixed;
+  right: 0;
+  top: 0;
+  z-index: 100;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 25px 5%;
+  background-color: transparent;
+}
+
+.logo {
+  font-size: 32px;
+  font-weight: 900;
+}
+
+.navlist {
+  display: flex;
+}
+
+.navlist a {
+  margin-left: 60px;
+  font-size: 15px;
+  font-weight: 600;
+  border-bottom: 2px solid transparent;
+  transition: all .5s ease;
+}
+
+.navlist a:hover {
+  border-bottom: 2px solid white;
+}
+
+#menu-icon{
+  display: none;
+}
+
+#menu-icon{
+  font-size: 35px;
+  z-index: 101;
+  cursor: pointer;
+}
+
+#menu-toggle{
+  display: none;
+}
+
+.menu-icon-action{
+  display: none;
+}
+
+.hero{
+  height: 100%;
+  width: 100%;
+  min-height: 100vh;
+  background: linear-gradient(245.59deg, #31494e 0%, #385e70 25%, #131313 75%);
+  position: relative;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  align-items: center;
+  gap: 2rem;
+}
+
+section{
+  padding: 0 8%;
+}
+
+.hero-text h5 {
+  font-size: 14px;
+  font-weight: 400;
+  margin-bottom: 25px;
+}
+
+.hero-text h1 {
+  font-family: 'Roboto Mono', monospace;
+  font-size: 50px;
+  line-height: 1;
+  margin: 0 0 30px;
+}
+
+.hero-text h4 {
+  font-size: 18px;
+  font-weight: 600;
+  margin-top: 10px;
+}
+
+.hero-text p {
+  font-size: 80%;
+  margin-bottom: 40px;
+  line-height: 1.9;
+}
+
+.hero-img img {
+  width: 400px;
+  height: 400px;
+  margin: 10% 0 0 10%;
+  transition: all 0.5s ease;
+  border-radius: 50%;
+  object-fit: cover;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5);
+}
+
+.hero-img img:hover {
+  transform: scale(1.05);
+  opacity: 0.8;
+}
+
+.hero-text a {
+  display: inline-block;
+  background-color: white;
+  color: black;
+  border: 1px solid transparent;
+  padding: 15px 30px;
+  line-height: 1.4;
+  font-size: 14px;
+  font-weight: 500;
+  border-radius: 30px;
+  text-transform: uppercase;
+  transition: all .5s ease;
+}
+
+.hero-text a:hover {
+  background-color: transparent;
+  color: white;
+  border: 1px solid white;
+  transform: translateX(8px);
+}
+
+.hero-text a.videos{
+  background-color: transparent;
+  border: 1px solid white;
+  margin-left: 20px;
+}
+
+.hero-text a.videos i{
+  vertical-align: middle;
+  margin-right: 5px;
+}
+
+.icons {
+  position: absolute;
+  top: 50vh;
+  padding: 0 3%;
+  transform: translateY(-50%);
+}
+
+.icons i {
+  display: block;
+  margin: 26px 0;
+  font-size: 28px;
+  transition: all 0.5s ease;
+}
+
+.icons i:hover{
+  color: #00CFFD;
+  transform: translateY(-5px);
+}
+
+.scroll-down {
+  position: absolute;
+  bottom: 6%;
+  right: 3%;
+}
+
+.scroll-down i {
+  display: block;
+  padding: 12px;
+  font-size: 25px;
+  background-color: #21383d;
+  border-radius: 30px;
+  transition: all .5s ease;
+}
+
+.scroll-down i:hover{
+  transform: translateY(-5px);
+}
+
+/* Responsive ajustes */
+@media (max-width:992px){
+  section {
+    padding: 0 3%;
+    transition: .2s;
+  }
+
+  .hero-text{
+    padding-top: 0;
+  }
+
+  .hero-img{
+    text-align: center;
+  }
+
+  .hero-img img{
+    width: 80%;
+    margin: 10% 0 0 10%;
+  }
+
+  .hero-text p {
+    font-size: 70%;
+  }
+
+  .icons{
+    display: none;
+  }
+
+  .scroll-down{
+    display: none;
+  }
+}
+
+@media (max-width: 768px){
+
+  .menu-icon-action{
+    display: block;
+  }
+
+  #menu-icon{
+    display: block;
+  }
+
+  .hero-text{
+    text-align: center;
+    padding-top: 100px;
+  }
+
+  .hero-img img {
+    margin: 0;
+  }
+
+  .hero {
+    height: 100%;
+    gap: 1rem;
+    grid-template-columns: 1fr;
+  }
+
+  .navlist{
+    position: absolute;
+    top: 100%;
+    right: -100%;
+    width: 200px;
+    height: 180px;
+    background-color: #021719ef;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 30px 20px;
+    transition: all .5s ease-out;
+  }
+
+  .navlist a {
+    display: block;
+    margin: 7px 0;
+  }
+
+  #menu-toggle:checked + label.menu-icon-action + ul{
+    right: 0;
+  }
+}
+
+@media (max-width: 500px){
+  .hero-text h1 {
+    font-size: 40px;
+  }
+}
+/* --- PORTFOLIO SECTION --- */
+.portfolio {
+  padding: 100px 8%;
+  background-color: #131313;
+  text-align: center;
+}
+
+.section-title {
+  font-size: 36px;
+  margin-bottom: 50px;
+  font-weight: 700;
+}
+
+.portfolio-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 40px;
+}
+
+.portfolio-item {
+  background-color: #1f1f1f;
+  border-radius: 10px;
+  overflow: hidden;
+  transition: transform 0.3s ease;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.5);
+}
+
+.portfolio-item:hover {
+  transform: translateY(-10px);
+}
+
+.portfolio-item img {
+  width: 100%;
+  height: 300px;
+  object-fit: cover;
+  border-radius: 15px;
+}
+
+.portfolio-text {
+  padding: 20px;
+}
+
+.portfolio-text h3 {
+  font-size: 20px;
+  margin-bottom: 10px;
+  font-weight: 600;
+}
+
+.portfolio-text p {
+  font-size: 14px;
+  margin-bottom: 15px;
+  line-height: 1.6;
+}
+
+.portfolio-text a {
+  display: inline-block;
+  background-color: #4d4d4d;
+  color: white;
+  padding: 8px 20px;
+  border-radius: 20px;
+  font-size: 14px;
+  font-weight: 500;
+  transition: all 0.3s ease;
+}
+
+.portfolio-text a:hover {
+  background-color: white;
+  color: black;
+}
+
+/* --- CONTACTO SECTION --- */
+.contacto {
+  padding: 100px 8%;
+  background-color: #131313;
+  text-align: center;
+}
+
+.contacto-container {
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.contacto-container p {
+  font-size: 18px;
+  margin-bottom: 20px;
+  line-height: 1.6;
+}
+
+.contacto-mail {
+  display: inline-block;
+  background-color: #4d4d4d;
+  color: white;
+  padding: 10px 20px;
+  border-radius: 20px;
+  font-size: 16px;
+  font-weight: 500;
+  transition: all 0.3s ease;
+}
+
+.contacto-mail:hover {
+  background-color: white;
+  color: black;
+}

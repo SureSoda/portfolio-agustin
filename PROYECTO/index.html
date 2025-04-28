@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- Título de la web -->
+  <title>Agustín Maccio | Portfolio</title>
+  <!-- Esta es la importación de nuestro archivo CSS  -->
+  <link rel="stylesheet" href="style.css">
+
+  <!-- https://boxicons.com/ -->
+  <link rel="stylesheet" href="https://unpkg.com/boxicons@latest/css/boxicons.min.css">
+
+  <!-- https://remixicon.com/ -->
+  <link href="https://cdn.jsdelivr.net/npm/remixicon@4.0.0/fonts/remixicon.css" rel="stylesheet" />
+
+  <!-- https://fonts.google.com/ -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inconsolata:wght@200;300;400;500;600;700;800;900&family=Roboto+Mono:wght@200;300;400;500;600;700&display=swap"
+    rel="stylesheet">
+
+</head>
+
+<body>
+
+<!-- Esta sección es la cabecera de la página web la cual tendrá logo y barra de navegación  -->
+<header>
+  <!-- LOGO  -->
+  <a href="#" class="logo">AGUSTIN MACCIO</a>
+
+  <!-- Truco para que el botón sea clickeable sin usar JAVASCRIPT -->
+  <input type="checkbox" name="checkbox" id="menu-toggle">
+  <label for="menu-toggle" class="menu-icon-action">
+    <div class='bx bx-menu' id="menu-icon"></div>
+  </label>
+
+
+  <ul class="navlist">
+    <li><a href="#">Home</a></li>
+    <li><a href="#">Sobre mí</a></li>
+    <li><a href="#portfolio">Portfolio</a></li>
+    <li><a href="#contacto">Contacto</a></li>
+  </ul>
+
+</header>
+
+<!-- HERO SECTION  -->
+
+<section class="hero">
+  <div class="hero-text">
+    <h5>Hola! Soy un estudiante de Ingenieria en Sistemas, mi nombre es:</h5>
+
+    <h1>Agustin Maccio</h1>
+    <p>Java, Spring Boot, Python, entre otros... <br>
+    </p>
+    <a href="assets/video/CV_Agustin_Luis_Maccio_English.pdf" target="_blank" download>Descargar CV</a>
+
+  </div>
+
+  <div class="hero-img">
+    <img src="assets/img/download.png" alt="persona codeando en blanco y negro">
+  </div>
+
+</section>
+
+<section class="portfolio" id="portfolio">
+  <h2 class="section-title">Mi Portfolio</h2>
+
+  <div class="portfolio-container">
+    <div class="portfolio-item">
+      <img src="assets/img/peluqueria.png" alt="Gestión de Peluquería">
+      <div class="portfolio-text">
+        <h3>Gestión de Peluquería</h3>
+        <p>Aplicación de gestión de peluquerías desarrollada en Java utilizando Spring Boot. Manejo de clientes, productos, servicios y turnos.</p>
+        <a href="https://github.com/tuusuario/gestion-peluqueria" target="_blank">Ver proyecto</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="contacto" id="contacto">
+  <h2 class="section-title">Contacto</h2>
+
+  <div class="contacto-container">
+    <p>¿Querés ponerte en contacto conmigo? Podés escribirme a mi correo:</p>
+    <a href="mailto:agustin.maccio@example.com" class="contacto-mail">agustinmaccio4@gmail.com</a>
+  </div>
+</section>
+
+<div class="icons">
+  <a href="#"><i class="ri-instagram-line"></i></a> <!-- No link yet -->
+  <a href="https://www.linkedin.com/in/agustin-maccio-542421362/" target="_blank"><i class="ri-linkedin-fill"></i></a>
+  <a href="https://github.com/SureSoda" target="_blank"><i class="ri-github-fill"></i></a>
+</div>
+
+<div class="scroll-down">
+  <a href="#"><i class="ri-arrow-down-s-fill"></i></a>
+</div>
+
+
+
+
+</body>
+
+</html>
