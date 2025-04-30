@@ -44,10 +44,11 @@
         <i class="ri-linkedin-fill"></i>
       </a>
     </div>
-
+    <!-- Flecha scroll down -->
+    <div class="scroll-down-icon" style="margin-top: 4rem; font-size: 2.5rem;">
+      <a href="#portfolio"><i class="ri-arrow-down-line"></i></a>
+    </div>
   </div>
-
-
 </div>
 
 <section class="skills-section">
@@ -77,16 +78,41 @@
 </section>
 
 <section class="portfolio" id="portfolio">
-  <h2 class="section-title scroll-float">Mi Portfolio</h2>
+  <h2 class="section-title scroll-float">Mis Proyectos</h2>
+  <div class="gooey-nav">
+    <ul>
+      <li><a href="#proyecto-actual">Proyecto Actual</a></li>
+      <li><a href="#proyectos-terminados">Proyectos Terminados</a></li>
+    </ul>
+    <div class="gooey"></div>
+  </div>
+  <div class="folder">
+    <div class="folder-header">📁 Proyectos</div>
+    <div class="folder-body">
+      <div id="proyecto-actual" class="portfolio-section">
+  <h3>Proyecto Actual</h3>
+  <div class="portfolio-item">
+    <img src="assets/img/finance-tracker.png" alt="Finance Tracker">
+    <div class="portfolio-text">
+      <h4>Finance Tracker</h4>
+      <p>Actualmente desarrollando una aplicación de seguimiento financiero personal, que permite registrar ingresos, egresos, objetivos y suscripciones, con visualización gráfica.</p>
+      <p><strong>Tecnologías usadas:</strong> Java, Spring Boot, HTML, CSS, JavaScript</p>
+    </div>
+  </div>
+</div>
 
-  <div class="portfolio-container">
-    <div class="portfolio-item">
-      <img src="PROYECTO/assets/img/peluqueria.png" alt="Gestión de Peluquería">
-      <div class="portfolio-text">
-        <h3>Gestión de Peluquería</h3>
-        <p>Aplicación de gestión de peluquerías desarrollada en Java utilizando Spring Boot. Manejo de clientes, productos, servicios y turnos.</p>
-        <a href="https://github.com/tuusuario/gestion-peluqueria" target="_blank">Ver proyecto</a>
-      </div>
+<div id="proyectos-terminados" class="portfolio-section">
+  <h3>Proyectos Terminados</h3>
+  <div class="portfolio-item">
+    <img src="assets/img/peluqueria.png" alt="Gestión de Peluquería">
+    <div class="portfolio-text">
+      <h4>Gestión de Peluquería</h4>
+      <p>Aplicación de gestión de peluquerías desarrollada en Java utilizando Spring Boot. Manejo de clientes, productos, servicios y turnos.</p>
+      <p><strong>Tecnologías usadas:</strong> Java, Spring Boot, HTML, CSS, JavaScript</p>
+      <a href="#" class="shiny-button">Ver proyecto</a>
+    </div>
+  </div>
+</div>
     </div>
   </div>
 </section>

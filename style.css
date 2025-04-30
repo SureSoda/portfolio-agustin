@@ -191,11 +191,14 @@ section{
 
 .scroll-down i {
   display: block;
-  padding: 12px;
-  font-size: 25px;
-  background-color: #21383d;
-  border-radius: 30px;
-  transition: all .5s ease;
+  padding: 14px;
+  font-size: 28px;
+  background-color: #1f1f1f;
+  border-radius: 50%;
+  transition: all 0.5s ease;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.4);
+  animation: bounce 2s infinite;
+  cursor: pointer;
 }
 
 .scroll-down i:hover{
@@ -294,6 +297,17 @@ section{
   padding: 100px 8%;
   background-color: #131313;
   text-align: center;
+}
+
+.portfolio-projects {
+  display: block !important;
+  opacity: 1 !important;
+  visibility: visible !important;
+  height: auto !important;
+  max-height: none !important;
+  transform: none !important;
+  pointer-events: all !important;
+  position: static !important;
 }
 
 .section-title {
@@ -756,4 +770,98 @@ body {
   100% {
     transform: translateX(0%);
   }
+}
+
+@keyframes bounce {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-8px);
+  }
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+
+/* --- ReactBits Folder imitation --- */
+.reactbits-folder {
+  border: 2px solid #2a2a2a;
+  border-radius: 12px;
+  background-color: #0d0d0d;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.3);
+  overflow: hidden;
+  max-width: 100%;
+}
+
+.folder-header {
+  background: linear-gradient(135deg, #1f1f1f, #2f2f2f);
+  padding: 16px 24px;
+  font-size: 18px;
+  font-weight: 600;
+  color: white;
+  border-bottom: 2px solid #2a2a2a;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.folder-content {
+  padding: 30px 20px;
+}
+
+.gooey-nav {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 40px;
+  gap: 20px;
+  position: relative;
+  padding: 20px;
+  background: rgba(255, 255, 255, 0.05);
+  border-radius: 30px;
+  backdrop-filter: blur(12px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  width: fit-content;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.gooey-nav ul {
+  display: flex;
+  gap: 30px;
+  padding: 0;
+  margin: 0;
+}
+
+.gooey-nav ul li a {
+  color: white;
+  font-size: 14px;
+  font-weight: 600;
+  background: linear-gradient(135deg, #1f1f1f, #2f2f2f);
+  padding: 12px 24px;
+  border-radius: 20px;
+  transition: all 0.3s ease;
+}
+
+.gooey-nav ul li a:hover {
+  background: white;
+  color: black;
+}
+
+.portfolio-section {
+  margin-top: 40px;
+  display: block;
+  opacity: 1;
+  visibility: visible;
+  height: auto;
+}
+
+.portfolio-section h3 {
+  font-size: 26px;
+  margin-bottom: 20px;
+  color: white;
+  text-align: center;
 }
