@@ -586,3 +586,174 @@ body {
     transform: translateX(100%);
   }
 }
+
+
+/* --- GLITCH TEXT ANIMATION --- */
+.glitch-text {
+  position: relative;
+  color: white;
+  font-size: 64px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  white-space: nowrap;
+}
+
+.glitch-text::before,
+.glitch-text::after {
+  content: attr(data-text);
+  position: absolute;
+  left: 0;
+  width: 100%;
+  overflow: hidden;
+  color: white;
+  clip: rect(0, 900px, 0, 0);
+}
+
+.glitch-text::before {
+  animation: glitchTop 2s infinite linear alternate-reverse;
+  color: white;
+  z-index: -1;
+}
+
+.glitch-text::after {
+  animation: glitchBottom 1.5s infinite linear alternate-reverse;
+  color: inherit;
+  z-index: -2;
+}
+
+@keyframes glitchTop {
+  0% {
+    clip: rect(0, 9999px, 0, 0);
+    transform: translate(0);
+  }
+  20% {
+    clip: rect(0, 9999px, 100px, 0);
+    transform: translate(-2px, -2px);
+  }
+  40% {
+    clip: rect(0, 9999px, 0, 0);
+    transform: translate(2px, 2px);
+  }
+  60% {
+    clip: rect(0, 9999px, 80px, 0);
+    transform: translate(-1px, 1px);
+  }
+  80% {
+    clip: rect(0, 9999px, 0, 0);
+    transform: translate(1px, -1px);
+  }
+  100% {
+    clip: rect(0, 9999px, 100px, 0);
+    transform: translate(0);
+  }
+}
+
+@keyframes glitchBottom {
+  0% {
+    clip: rect(0, 9999px, 0, 0);
+    transform: translate(0);
+  }
+  20% {
+    clip: rect(20px, 9999px, 100px, 0);
+    transform: translate(2px, 2px);
+  }
+  40% {
+    clip: rect(0, 9999px, 0, 0);
+    transform: translate(-2px, -2px);
+  }
+  60% {
+    clip: rect(30px, 9999px, 80px, 0);
+    transform: translate(1px, -1px);
+  }
+  80% {
+    clip: rect(0, 9999px, 0, 0);
+    transform: translate(-1px, 1px);
+  }
+  100% {
+    clip: rect(40px, 9999px, 100px, 0);
+    transform: translate(0);
+  }
+}
+
+
+/* --- SHINY SKILL BUTTONS --- */
+.skills-buttons {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 16px;
+  justify-content: center;
+  margin-top: 40px;
+}
+
+.skill-btn {
+  padding: 12px 20px;
+  font-size: 16px;
+  font-weight: 600;
+  background: linear-gradient(135deg, #1a1a1a, #2a2a2a, #1a1a1a);
+  background-size: 200%;
+  color: #c4c4c4;
+  border-radius: 30px;
+  position: relative;
+  overflow: hidden;
+  transition: background-position 0.5s ease, transform 0.3s ease;
+  box-shadow: 0 4px 8px rgba(255, 255, 255, 0.1);
+  text-transform: uppercase;
+}
+
+.skill-btn:hover {
+  background-position: right center;
+  transform: translateY(-2px);
+}
+
+.skill-btn i {
+  margin-right: 8px;
+  vertical-align: middle;
+}
+
+.infinite-scroll-container {
+  overflow: hidden;
+  width: 100%;
+  position: relative;
+}
+
+.infinite-scroll-track {
+  display: flex;
+  width: fit-content;
+  animation: scrollInfinite 20s linear infinite;
+  gap: 32px;
+}
+
+.infinite-skill {
+  flex-shrink: 0;
+  padding: 10px 20px;
+  font-size: 16px;
+  background: linear-gradient(135deg, #1a1a1a, #2a2a2a, #1a1a1a);
+  color: #c4c4c4;
+  border-radius: 30px;
+  box-shadow: 0 4px 8px rgba(255, 255, 255, 0.1);
+  text-transform: uppercase;
+  font-weight: 600;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+
+@keyframes scrollInfinite {
+  0% {
+    transform: translateX(0%);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+@keyframes scrollInfiniteReverse {
+  0% {
+    transform: translateX(-50%);
+  }
+  100% {
+    transform: translateX(0%);
+  }
+}
